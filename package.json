@@ -1,0 +1,28 @@
+{
+  "name": "@nestcloud/validations",
+  "version": "0.6.11",
+  "description": "",
+  "author": "Miaowing <i@zfeng.net>",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nest-cloud/validations.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nest-cloud/validations/issues"
+  },
+  "homepage": "https://github.com/nest-cloud/validations#readme",
+  "dependencies": {
+    "class-transformer": "^0.1.9",
+    "class-validator": "^0.8.5"
+  },
+  "devDependencies": {
+    "@nestjs/common": "^6.11.8"
+  }
+}
