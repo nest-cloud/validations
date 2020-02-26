@@ -75,9 +75,9 @@ export class CatsController {
 }
 ```
 
-### Validators
+### More Validators
 
-https://github.com/nest-cloud/validations/tree/master/lib
+https://github.com/nest-cloud/validations/tree/master
 
 ## Stay in touch
 
