@@ -14,7 +14,7 @@ export class IsNotEmpty implements PipeTransform<any> {
     async transform(value: any, metadata: ArgumentMetadata) {
         if (!this.validator.isNotEmpty(value)) {
             const { data } = metadata;
-            const defaults = data ? `${data} is not valid` : 'Validation failed';
+            const defaults = data ? `${data} is required` : 'Validation failed';
             throw new BadRequestException(this.message || defaults);
         }
         return value;

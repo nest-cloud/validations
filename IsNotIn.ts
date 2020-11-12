@@ -14,9 +14,12 @@ export class IsNotIn implements PipeTransform<any> {
     }
 
     async transform(value: any, metadata: ArgumentMetadata) {
+        if (value === undefined) {
+            return value;
+        }
         if (!this.validator.isNotIn(value, this.possibleValues)) {
             const { data } = metadata;
-            const defaults = data ? `${data} is not valid` : 'Validation failed';
+            const defaults = data ? `${data} is invalid` : 'Validation failed';
             throw new BadRequestException(this.message || defaults);
         }
         return value;

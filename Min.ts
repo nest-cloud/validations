@@ -14,9 +14,12 @@ export class Min implements PipeTransform<any> {
     }
 
     async transform(value: any, metadata: ArgumentMetadata) {
+        if (value === undefined) {
+            return value;
+        }
         if (!this.validator.min(value, this.min)) {
             const { data } = metadata;
-            const defaults = data ? `${data} is not valid` : 'Validation failed';
+            const defaults = data ? `${data} is invalid` : 'Validation failed';
             throw new BadRequestException(this.message || defaults);
         }
         return value;
