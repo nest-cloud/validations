@@ -20,7 +20,7 @@
   "homepage": "https://github.com/nest-cloud/validations#readme",
   "dependencies": {
     "class-transformer": "^0.1.9",
-    "class-validator": "^0.8.5"
+    "class-validator": "^0.14.0"
   },
   "devDependencies": {
     "@nestjs/common": "^6.11.8"
